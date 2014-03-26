@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby on Rails Tutorial Sample App | <%= @title %></title>
+    <title><%= title %></title>
     <%= csrf_meta_tag %>
+
+    <% # diffère du tuto, mais c'est pour tester%>
+    <%= stylesheet_link_tag 'bootstrap-3.1.1/css/bootstrap', :media => 'btp' %>
   </head>
   <body>
 	  <%= yield %>
