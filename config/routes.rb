@@ -7,12 +7,15 @@ App::Application.routes.draw do
 #  get "pages/about"
 #
 #  get "pages/help"
+  get 'users/new'
 
   # matches a pattern and routes it to the corresponding action in the Pages ctrler
+  root :to => 'pages#home'
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
-  root, :to => 'pages#home'
+
+  match '/signup', :to => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
