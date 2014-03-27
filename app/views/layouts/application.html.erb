@@ -3,11 +3,15 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
-
-    <% # diffère du tuto, mais c'est pour tester%>
-    <%= stylesheet_link_tag 'bootstrap-3.1.1/css/bootstrap', :media => 'btp' %>
+    <% # ce truc renvoit à un "partial" nommé _stylesheets.html.erb dans /views/layouts/ %>
+    <%= render 'layouts/stylesheets' %>
   </head>
+
   <body>
-	  <%= yield %>
+    <div class="container">
+      <%= render 'layouts/header' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
