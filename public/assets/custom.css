@@ -114,3 +114,29 @@ footer {
 footer nav {
   float: none;
 }
+
+/* User show page */
+table.profile {
+    background-color: white;
+    margin: 10px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+td.main {
+    width: 70%;
+    padding: 1em;
+}
+
+td.sidebar {
+    width: 30%;
+    padding: 1em;
+    vertical-align: top;
+    margin: 10px;
+    background: #ffc;
+}
+
+.profile img.gravatar {
+    border: 1px solid #999;
+    margin-bottom: -15px;
+}
