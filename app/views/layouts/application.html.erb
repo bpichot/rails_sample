@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <%= csrf_meta_tag %>
-    <% # ce truc renvoit à un "partial" nommé _stylesheets.html.erb dans /views/layouts/ %>
-    <%= render 'layouts/stylesheets' %>
-  </head>
+    <head>
+        <title><%= title %></title>
+        <%= csrf_meta_tag %>
+        <% # ce truc renvoit à un "partial" nommé _stylesheets.html.erb dans /views/layouts/ %>
+        <%= render 'layouts/stylesheets' %>
+    </head>
 
-  <body>
-    <div class="container">
-      <%= render 'layouts/header' %>
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-    </div>
-  </body>
+    <body>
+        <div class="container">
+            <%= render 'layouts/header' %>
+            <section class="round">
+                <% flash.each do |key, value| %>
+                    <div class="alert alert-dismissable <%= key %>"><%= value %><button type="button" class="close" aria-hidden="true" data-dismiss="alert">&times;</button></div>
+            <% end %>
+                <%= yield %>
+            </section>
+            <%= render 'layouts/footer' %>
+        </div>
+    </body>
 </html>
